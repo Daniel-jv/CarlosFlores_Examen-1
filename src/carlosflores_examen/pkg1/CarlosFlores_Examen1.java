@@ -20,7 +20,7 @@ public class CarlosFlores_Examen1 {
             switch(op){
                 
                 case 1:{
-                    historial = historial + 'y';
+                    historial = historial + 'y';//se registra la visita al ejercicio
                     System.out.println("\n---Ejercicios String");
                     String cad = "";
                     String mitad1 = "";
@@ -56,15 +56,7 @@ public class CarlosFlores_Examen1 {
                             }
                         }
                     }else{
-                        cadena_invertida(cad);
-                        /*for (int i = 0; i < cad.length(); i++) {
-                            if(i < cad.length()/2){
-                                mitad1 += cad.charAt(i);
-                            }else{
-                                mitad2 += cad.charAt(i);
-                            }
-                        }
-                        System.out.print("Cadena invertida: " + mitad2+mitad1);*/
+                        cadena_invertida(cad);//metodo para imprimir una cadena invertida
                     }
                     System.out.println();
                     System.out.println();
@@ -72,7 +64,7 @@ public class CarlosFlores_Examen1 {
                 }//fin case 1
                 
                 case 2:{
-                    historial = historial + 'x';
+                    historial = historial + 'x';//se registra la visita al ejercicio
                     System.out.println("\n---Respuestas a preguntas");
                     System.out.println("\nDescriba el funcionamiento de los ciclor for, while y do while:"
                             + "\n-Son ciclos que realizan tareas mientras no excedan limitaciones impuestas.");
@@ -88,7 +80,7 @@ public class CarlosFlores_Examen1 {
                 
                 case 3:{
                     System.out.println("---Mostrar el historial del menú");
-                    for (int i = 0; i < historial.length(); i++) {
+                    for (int i = 0; i < historial.length(); i++) {//imprime el historial
                         if(historial.charAt(i) == 'y'){
                             System.out.print("Ejercicios String");
                         }else{
@@ -106,7 +98,7 @@ public class CarlosFlores_Examen1 {
                 case 4:{
                     System.out.println("Ha salido del programa, nos vemos");
                     int salida =1;
-                    var = salida(salida);
+                    var = salida(salida);//metodo para salir
                     System.out.println();
                     break;
                 }//fin case 4
