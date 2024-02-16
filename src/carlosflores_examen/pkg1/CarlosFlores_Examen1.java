@@ -56,14 +56,15 @@ public class CarlosFlores_Examen1 {
                             }
                         }
                     }else{
-                        for (int i = 0; i < cad.length(); i++) {
+                        cadena_invertida(cad);
+                        /*for (int i = 0; i < cad.length(); i++) {
                             if(i < cad.length()/2){
                                 mitad1 += cad.charAt(i);
                             }else{
                                 mitad2 += cad.charAt(i);
                             }
                         }
-                        System.out.print("Cadena invertida: " + mitad2+mitad1);
+                        System.out.print("Cadena invertida: " + mitad2+mitad1);*/
                     }
                     System.out.println();
                     System.out.println();
@@ -128,6 +129,19 @@ public class CarlosFlores_Examen1 {
             porfavor_lic = false;
         }
         return porfavor_lic;
+    }
+    
+    public static void cadena_invertida(String cad){
+        String mitad1 = "";
+        String mitad2 = "";
+        for (int i = 0; i < cad.length(); i++) {
+            if(i < cad.length()/2){
+                mitad1 += cad.charAt(i);
+            }else{
+                mitad2 += cad.charAt(i);
+            }
+        }
+        System.out.print("Cadena invertida: " + mitad2+mitad1);
     }
     
 }//fin class
