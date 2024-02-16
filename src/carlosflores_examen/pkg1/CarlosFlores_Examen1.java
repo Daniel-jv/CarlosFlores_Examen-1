@@ -104,7 +104,8 @@ public class CarlosFlores_Examen1 {
                 
                 case 4:{
                     System.out.println("Ha salido del programa, nos vemos");
-                    var = false;
+                    int salida =1;
+                    var = salida(salida);
                     System.out.println();
                     break;
                 }//fin case 4
@@ -120,5 +121,13 @@ public class CarlosFlores_Examen1 {
         }while(var);//fin while
     
     }//fin main
+    
+    public static boolean salida(int var){
+        boolean porfavor_lic = true;
+        if(var == 1){
+            porfavor_lic = false;
+        }
+        return porfavor_lic;
+    }
     
 }//fin class
