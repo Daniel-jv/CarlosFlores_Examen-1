@@ -8,6 +8,7 @@ public class CarlosFlores_Examen1 {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
         boolean var = true;
+        String historial = "";
         do{
             System.out.println("---MENU");
             System.out.println("1.Ejercicios String");
@@ -16,11 +17,10 @@ public class CarlosFlores_Examen1 {
             System.out.println("4.Salir");
             System.out.print("Ingrese una opcion: ");
             int op = leer.nextInt();
-            String historial = "";
             switch(op){
                 
                 case 1:{
-                    historial += '1';
+                    historial = historial + 'y';
                     System.out.println("\n---Ejercicios String");
                     String cad = "";
                     String mitad1 = "";
@@ -66,11 +66,12 @@ public class CarlosFlores_Examen1 {
                         System.out.print("Cadena invertida: " + mitad2+mitad1);
                     }
                     System.out.println();
+                    System.out.println();
                     break;
                 }//fin case 1
                 
                 case 2:{
-                    historial += '2';
+                    historial = historial + 'x';
                     System.out.println("\n---Respuestas a preguntas");
                     System.out.println("\nDescriba el funcionamiento de los ciclor for, while y do while:"
                             + "\n-Son ciclos que realizan tareas mientras no excedan limitaciones impuestas.");
@@ -85,8 +86,19 @@ public class CarlosFlores_Examen1 {
                 }//fin case 2
                 
                 case 3:{
-                    System.out.println("historial");
+                    System.out.println("---Mostrar el historial del menú");
+                    for (int i = 0; i < historial.length(); i++) {
+                        if(historial.charAt(i) == 'y'){
+                            System.out.print("Ejercicios String");
+                        }else{
+                            System.out.print("Respuestas a preguntas");
+                        }
+                        if(i < historial.length()-1){
+                            System.out.print(" - ");
+                        }
+                    }
                     System.out.println();
+                    System.out.println("");
                     break;
                 }//fin case 3
                 
