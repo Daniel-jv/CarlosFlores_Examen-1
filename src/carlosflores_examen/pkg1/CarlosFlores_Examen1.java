@@ -1,20 +1,112 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package carlosflores_examen.pkg1;
 
-/**
- *
- * @author carlo
- */
+import java.util.Scanner;
+
 public class CarlosFlores_Examen1 {
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
-        // TODO code application logic here
-    }
+        Scanner leer = new Scanner(System.in);
+        boolean var = true;
+        do{
+            System.out.println("---MENU");
+            System.out.println("1.Ejercicios String");
+            System.out.println("2.Respuestas a preguntas");
+            System.out.println("3.Mostrar el historial del menú");
+            System.out.println("4.Salir");
+            System.out.print("Ingrese una opcion: ");
+            int op = leer.nextInt();
+            String historial = "";
+            switch(op){
+                
+                case 1:{
+                    historial += '1';
+                    System.out.println("\n---Ejercicios String");
+                    String cad = "";
+                    String mitad1 = "";
+                    String mitad2 = "";
+                    int m1 = 0;
+                    int m2 = 0;
+                    while(cad.length() < 8){
+                        System.out.println("Ingrese una cadena de 8 o mas caracteres:");
+                        leer.nextLine();
+                        cad = leer.nextLine();
+                        if(cad.length() < 8){
+                            System.out.println("Porfavor, ingrese una cadena de 8 o mas caracteres.");
+                        }
+                    }
+                    if(cad.length()% 2 == 0){
+                        for (int i = 0; i < cad.length(); i++) {
+                            if(i < cad.length()/2){
+                                mitad1 += cad.charAt(i);
+                            }else{
+                                mitad2 += cad.charAt(i);
+                            }
+                        }
+                        for (int i = 0; i < cad.length(); i++) {
+                            if(i % 2 == 0){
+                                System.out.print(mitad1.charAt(m1));
+                                m1++;
+                            }else{
+                                System.out.print(mitad2.charAt(m2));
+                                m2++;
+                            }
+                            if(i < cad.length()-1){
+                                System.out.print("-");//separar caracteres
+                            }
+                        }
+                    }else{
+                        for (int i = 0; i < cad.length(); i++) {
+                            if(i < cad.length()/2){
+                                mitad1 += cad.charAt(i);
+                            }else{
+                                mitad2 += cad.charAt(i);
+                            }
+                        }
+                        System.out.print("Cadena invertida: " + mitad2+mitad1);
+                    }
+                    System.out.println();
+                    break;
+                }//fin case 1
+                
+                case 2:{
+                    historial += '2';
+                    System.out.println("\n---Respuestas a preguntas");
+                    System.out.println("\nDescriba el funcionamiento de los ciclor for, while y do while:"
+                            + "\n-Son ciclos que realizan tareas mientras no excedan limitaciones impuestas.");
+                    System.out.println("\nDescriba el funcionamiento de .charAt(), indexOf() y .legth():"
+                            + "\n-Son metodos que nos sirven para trabajar con cadenas, el .charAt() busca un caracter especifico segun el indice ingresado,"
+                            + "\nindexOf() busca un substring dentro de otra cadena,.legth() nos devuelve en un int cuanto mide la cadena empezando a contar desde 0.");
+                    System.out.println("\nMencione 2 tipos de datos primitivos de java y cual es su uso:"
+                            + "\n1)Int, almacena numeros enteros "
+                            + "\n2)String, almacena una cadena de caracteres");
+                    System.out.println();
+                    break;
+                }//fin case 2
+                
+                case 3:{
+                    System.out.println("historial");
+                    System.out.println();
+                    break;
+                }//fin case 3
+                
+                case 4:{
+                    System.out.println("Ha salido del programa, nos vemos");
+                    var = false;
+                    System.out.println();
+                    break;
+                }//fin case 4
+                
+                default:{
+                    System.out.println("Opcion no valida intente de nuevo.");
+                    System.out.println();
+                    break;
+                }//fin default
+                
+            }//fin switch
+            
+        }while(var);//fin while
     
-}
+    }//fin main
+    
+}//fin class
